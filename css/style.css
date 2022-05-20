@@ -10,6 +10,7 @@ span {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 10px;
+    box-shadow: lightgray 10px 10px 10px;
   }
   
   /* Style the header links */
