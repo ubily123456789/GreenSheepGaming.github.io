@@ -3,6 +3,7 @@ import pygame
 
 WIDTH, HEIGHT = 900, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+WIN2 = pygame.display.set_mode((WIDTH + 200, HEIGHT))
 pygame.display.set_caption("FS 23 beata!")
 FPS = 60
 
