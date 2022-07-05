@@ -85,10 +85,20 @@ span {
     text-align: center;
 }
 
-.ubily-section{
+#ubily-section{
+    font-family:Arial, helvetica, sans-serif;
+    border:3px blue solid;
+}
+
+#show{
     background-color:#333;
     color:#fff;
     border:5px red solid;
     padding:20px;
-    margin:20px 0px;
+    margin:20px 10px;
+    margin-top:10px;
+}
+
+.other-links{
+    margin:10px;
 }
