@@ -88,6 +88,7 @@ span {
 #ubily-section{
     font-family:Arial, helvetica, sans-serif;
     border:3px blue solid;
+    margin:10px;
 }
 
 #show{
@@ -99,6 +100,31 @@ span {
     margin-top:10px;
 }
 
-#other-links{
+.other-links{
     margin:10px;
+    padding:10px;
+    background-color:rgb(90, 90, 90);
+    border-radius:6px;
+}
+
+.other-links a{
+    margin-right:10px;
+    color:coral;
+    text-decoration:none;
+}
+
+.other-links a:hover{
+    color:ccc;
+}
+
+.help h1{
+    font-family:Arial, helvetica, sans-serif;
+    font-size:20px;
+    text-transform:uppercase;
+}
+
+.help h2{
+    font-family:Arial, helvetica, sans-serif;
+    font-size:15px;
+    text-transform:uppercase;
 }
