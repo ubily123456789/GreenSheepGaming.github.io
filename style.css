@@ -71,27 +71,27 @@ span {
     }
   }
 .par {
-    color: rgb(194, 194, 194);
+  color: rgb(194, 194, 194);
 }
 .backgroundc {
-    padding: 70px;
-    margin: 70px;
+  padding: 70px;
+  margin: 70px;
 }
 .backgroundcc {
-    padding: 70px;
-    margin: 70px;
+  padding: 70px;
+  margin: 70px;
 }
 .backgroundcs {
-    box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px #888888;
 }
 .bacr {
-    color: rgb(90, 90, 90);
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(90, 90, 90);
+  font-size: 26px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .downlaodb {
-    font-size: 30px;
-    text-decoration: none;
-    color: rgb(148, 148, 148);
-    text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(148, 148, 148);
+  text-align: center;
 }
