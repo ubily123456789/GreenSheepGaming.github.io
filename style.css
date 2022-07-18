@@ -5,6 +5,17 @@
 span {
     color: red;
 }
+
+#my-form{
+    margin-top:100px;
+    margin-bottom:30px;
+    margin-left:10px;
+}
+
+#password{
+    margin-bottom:3px;
+}
+
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
