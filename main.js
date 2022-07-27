@@ -4,15 +4,15 @@ const nameInput = document.querySelector('#password');
 myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (nameInput.value === 'ReAsEaRcH StUdY') {
-        alert('ReAsEaRcH StUdY');
-    }
+  if (nameInput.value === 'ReAsEaRcH StUdY') {
+    alert('ReAsEaRcH StUdY');
+  }
 
-    // testing
+  // testing
 
-    if (nameInput.value === 'testing') {
-        alert('nothing for testing right now');
-    }
+  if (nameInput.value === 'testing') {
+    alert('nothing for testing right now');
+  }
 }
