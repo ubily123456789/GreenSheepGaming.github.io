@@ -1,59 +1,57 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Holiday Countdown</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-	font-family: arial;
-}
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-body {
-  text-align: center;
-  background-color: rgb(226, 233, 240);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .header {
+            width: 100%;
+            height: 10vh;
+            box-shadow: rgb(226, 223, 223) 10px 10px 40px;
+            
+        }
+        .countdown-link {
+            font-size: 30px;
+            color: rgb(54, 52, 52);
+            text-decoration: none;
+            position: absolute;
+            left: 40%;
+            top: 2%
+        }
+        .translate-link {
+            font-size: 30px;
+            color: rgb(54, 52, 52);
+            text-decoration: none;
+            position: absolute;
+            left: 57%;
+            top: 2%
+        }
+        p {
+            margin: 50px;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Time Till Chrismas holladay</h1>
-<p id="demo"></p>
-<h6>Code by henry</h6>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("dec 22, 2022 15:16:0").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Happy holladay";
-  }
-}, 1000);
-</script>
-
+    <div class="header">
+        <div class="Items">
+            <a href="/Countdown/" class="countdown-link">Countdown</a>
+            <a href="/Transilate/" class="translate-link">Translator</a>
+        </div>
+    </div>
+    <p>
+        This Update Includes: <br>
+          An update to the Countdown,<br>
+          A Nice header,<br>
+          A index page,<br>
+          No more .html link, <br>
+          And for last is a translator thats still in develipment<br>
+    </p>
 </body>
 </html>
