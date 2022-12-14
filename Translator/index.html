@@ -36,12 +36,23 @@
     <br><br>
     <input type="button" class="button" value="Translate" onclick="t()">
     <input type="button" class="button" value="Decode" onclick="decode()">
+    <br>
+    <br>
+    <h4>Decode:</h4>
+    <br>
+    <h3 class="h31"></h3>
+    <br>
+    <br>
+    <h4>Translation:</h4>
+    <br>
+    <h3 class="h32"></h3>
   </div>
 
   <script type="text/javascript">
     console.log('if you see this i made a change so it ataumatily gets the last letter from translatain it took me a couple hours be thankful')
     const input = document.querySelector('.input');
-    const input2 = document.querySelector('.input2');
+    const h32 = document.querySelector('.h32');
+    const h31 = document.querySelector('.h31');
     const button = document.querySelector('.button');
     let last = input.value
     let res = last.charAt(last.length-1);
@@ -52,10 +63,10 @@
 
     // letters
     alphabet = 'abcdefghijklmnopqrstuvwxyz '
-    alphabet2 = 'фджмяьйцнгшщзхъчывапролби火э'
-    alphabet3 = 'ㅂㅈㄷㄱ쇼ㅕㅑㅐㅔ]ㅁㄴㅇㄹ호ㅓㅏㅣㅋㅌㅊ퓨ㅜ ㅡみ'
-    alphabet4 = 'たていすかんなにらせちとしはきくまのりれけむつさそひこ'
-    alphabet5 = 'ςερτυθιοπασδφγηξκλζχψωβνμ¥§'
+    alphabet2 = 'фджмяьйцнгшщзхъчывапролби火э '
+    alphabet3 = 'ㅂㅈㄷㄱ쇼ㅕㅑㅐㅔ]ㅁㄴㅇㄹ호ㅓㅏㅣㅋㅌㅊ퓨ㅜ ㅡみ '
+    alphabet4 = 'たていすかんなにらせちとしはきくまのりれけむつさそひこ '
+    alphabet5 = 'ςερτυθιοπασδφγηξκλζχψωβνμ¥§ '
     console.log(alphabet4.length);
 
     alphanum = 'юㅒみ€'
@@ -68,25 +79,25 @@
     function tran() {
       let translation = ''; let curr_char = ''
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet2.charAt(j)}}}
-      input.value = translation + lang
+      h32.innerHTML = translation + lang
     }
 
     function tran2() {
       let translation = ''; let curr_char = ''
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet3.charAt(j)}}}
-      input.value = translation + lang
+      h32.innerHTML = translation + lang
     }
 
     function tran3() {
       let translation = ''; let curr_char = ''
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet4.charAt(j)}}}
-      input.value = translation + lang
+      h32.innerHTML = translation + lang
     }
 
     function tran4() {
       let translation = ''; let curr_char = ''
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet5.charAt(j)}}}
-      input.value = translation + lang
+      h32.innerHTML = translation + lang
     }
 
     function t() {
@@ -105,7 +116,7 @@
       if (res == "み") {alphabetchoice = alphabet4}
       if (res == "€") {alphabetchoice = alphabet5}
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabetchoice.length; j++) {if (curr_char == alphabetchoice.charAt(j)) {translation = translation + alphabet.charAt(j)}}}
-      input.value = translation
+      h31.innerHTML = translation
     }
   </script>
   </body>
