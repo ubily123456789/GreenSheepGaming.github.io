@@ -1,59 +1,72 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Holiday Countdown</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-	font-family: arial;
-}
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-body {
-  text-align: center;
-  background-color: rgb(226, 233, 240);
-}
-</style>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Countdown</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="headers.css" rel="stylesheet">
+    <style>
+      .countdown {
+        font-size: 10vh;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4">Sumeran</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link">       </a></li>
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/Translator/" class="nav-link">Translator</a></li>
+          <li class="nav-item"><a href="/Countdown/" class="nav-link active" aria-current="page">Countdown</a></li>
+        </ul>
+      </header>
+    </div>
 
-<h1>Time Till Chrismas holladay</h1>
-<p id="demo"></p>
-<h6>Code by henry</h6>
+    <p id="Countdown" class="countdown"></p>
+    <p>Days Till Chrismas Holliday</p>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("dec 22, 2022 15:16:0").getTime();
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Dec 23, 2022 15:15:15").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+      // Update the count down every 1 second
+      var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Happy holladay";
-  }
-}, 1000);
-</script>
+        // Get today's date and time
+        var now = new Date().getTime();
 
-</body>
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("Countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
+    </body>
 </html>

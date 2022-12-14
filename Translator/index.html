@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Translator</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="headers.css" rel="stylesheet">
+    <style>
+      .button {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4">Sumeran</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link">       </a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/Translator/" class="nav-link active" aria-current="page">Translator</a></li>
+        <li class="nav-item"><a href="/Countdown/" class="nav-link">Countdown</a></li>
+      </ul>
+    </header>
+  </div>
+  <div class="container">
+    <h1>Translate</h1>
+    <input type="text" class="input" autofocus>
+    <br><br>
+    <input type="button" class="button" value="Translate" onclick="t()">
+    <input type="button" class="button" value="Decode" onclick="decode()">
+  </div>
+
+  <script type="text/javascript">
+    console.log('if you see this i made a change so it ataumatily gets the last letter from translatain it took me a couple hours be thankful')
+    const input = document.querySelector('.input');
+    const input2 = document.querySelector('.input2');
+    const button = document.querySelector('.button');
+    let last = input.value
+    let res = last.charAt(last.length-1);
+    console.log(res);
+    // ясту
+
+    alphabetchoice = ''
+
+    // letters
+    alphabet = 'abcdefghijklmnopqrstuvwxyz '
+    alphabet2 = 'фджмяьйцнгшщзхъчывапролби火э'
+    alphabet3 = 'ㅂㅈㄷㄱ쇼ㅕㅑㅐㅔ]ㅁㄴㅇㄹ호ㅓㅏㅣㅋㅌㅊ퓨ㅜ ㅡみ'
+    alphabet4 = 'たていすかんなにらせちとしはきくまのりれけむつさそひこ'
+    alphabet5 = 'ςερτυθιοπασδφγηξκλζχψωβνμ¥§'
+    console.log(alphabet4.length);
+
+    alphanum = 'юㅒみ€'
+
+    random_num = Math.floor(Math.random() * alphanum.length)
+
+    lang = alphanum.charAt(random_num)
+    console.log(lang)
+
+    function tran() {
+      let translation = ''; let curr_char = ''
+      for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet2.charAt(j)}}}
+      input.value = translation + lang
+    }
+
+    function tran2() {
+      let translation = ''; let curr_char = ''
+      for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet3.charAt(j)}}}
+      input.value = translation + lang
+    }
+
+    function tran3() {
+      let translation = ''; let curr_char = ''
+      for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet4.charAt(j)}}}
+      input.value = translation + lang
+    }
+
+    function tran4() {
+      let translation = ''; let curr_char = ''
+      for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabet.length; j++) {if (curr_char == alphabet.charAt(j)) {translation = translation + alphabet5.charAt(j)}}}
+      input.value = translation + lang
+    }
+
+    function t() {
+      if (lang === alphanum.charAt(0)) {tran()}
+      if (lang === alphanum.charAt(1)) {tran2()}
+      if (lang === alphanum.charAt(2)) {tran3()}
+      if (lang === alphanum.charAt(3)) {tran4()}
+    }
+
+    function decode() {
+      let res = input.value.charAt(input.value.length-1);
+      console.log(res);
+      let translation = ''; let curr_char = ''
+      if (res == "ю") {alphabetchoice = alphabet2}
+      if (res == "ㅒ") {alphabetchoice = alphabet3}
+      if (res == "み") {alphabetchoice = alphabet4}
+      if (res == "€") {alphabetchoice = alphabet5}
+      for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabetchoice.length; j++) {if (curr_char == alphabetchoice.charAt(j)) {translation = translation + alphabet.charAt(j)}}}
+      input.value = translation
+    }
+  </script>
+  </body>
+</html>
