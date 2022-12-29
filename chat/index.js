@@ -218,6 +218,7 @@ window.onload = function() {
       }
       // Sends message/saves the message to firebase database
       send_message(message){
+        
         var parent = this
         var hour = date.getHours();
         // Get current minute
@@ -229,7 +230,7 @@ window.onload = function() {
         if(parent.get_name() == null && message == null){
           return
         }
-  
+        console.log(hour + ":" + minute)
         // Get the firebase database value
         db.ref('chats/').once('value', function(message_object) {
           // This index is mortant. It will help organize the chat in order
