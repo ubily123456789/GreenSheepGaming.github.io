@@ -217,6 +217,9 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
+        var hour = date.getHours();
+        // Get current minute
+        var minute = date.getMinutes();
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -231,7 +234,7 @@ window.onload = function() {
           var index = parseFloat(message_object.numChildren()) + 1
           db.ref('chats/' + `message_${index}`).set({
             name: parent.get_name(),
-            message: message,
+            message: message + hour + ":" + minute,
             index: index
           })
           .then(function(){
