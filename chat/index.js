@@ -89,9 +89,11 @@ window.onload = function() {
         // the join_input.value
         if (join_input.value === "ubily" && Pass_input.value === "test"){
         parent.save_name("Ubily")
+        parent.create_chat()
         }
         if (join_input.value === "GreenSheep" && Pass_input.value === ""){
           parent.save_name("GreenSheep")
+          parent.create_chat()
         }
         // Remove the join_container. So the site doesn't look weird.
         join_container.remove()
