@@ -237,7 +237,7 @@ window.onload = function() {
           var index = parseFloat(message_object.numChildren()) + 1
           db.ref('chats/' + `message_${index}`).set({
             name: parent.get_name(),
-            message: message + hour + ":" + minute,
+            message: message,
             index: index
           })
           .then(function(){
