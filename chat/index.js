@@ -220,9 +220,9 @@ window.onload = function() {
       send_message(message){
         
         var parent = this
-        var hour = date.getHours();
-        // Get current minute
-        var minute = date.getMinutes();
+        var date = new Date()
+        var hours = date.getHours
+        var minnuts = date.getMinutes
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -230,7 +230,7 @@ window.onload = function() {
         if(parent.get_name() == null && message == null){
           return
         }
-        console.log(hour + ":" + minute)
+        console.log(hours + ":" + minnuts)
         // Get the firebase database value
         db.ref('chats/').once('value', function(message_object) {
           // This index is mortant. It will help organize the chat in order
