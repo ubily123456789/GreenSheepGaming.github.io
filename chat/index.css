@@ -209,11 +209,28 @@ body{
     align-items: center;
     margin-top: 20px;
   }
+  #chat_ping_container{
+    width: 100%;
+    display: inline-block;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
   #chat_logout{
     color: #D64045;
     cursor: pointer;
   }
   #chat_logout:hover{
+    text-decoration: underline;
+  }
+  #ping_send{
+    
+    color: #2bff00;
+    cursor: pointer;
+  }
+  #ping_send:hover{
     text-decoration: underline;
   }
   .message_container{

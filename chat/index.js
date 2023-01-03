@@ -99,7 +99,6 @@ window.onload = function() {
         join_container.remove()
         // parent = this. But it is not the join_button
         // It is (MEME_CHAT = this).
-        parent.create_chat()
             }
         }
   
@@ -140,7 +139,7 @@ window.onload = function() {
         title_container.classList.add('chat_title_container')
         // Make the title smaller by making it 'chat_title'
         title.classList.add('chat_title')
-  
+        
         var chat_container = document.createElement('div')
         chat_container.setAttribute('id', 'chat_container')
   
@@ -157,13 +156,28 @@ window.onload = function() {
         chat_input_send.setAttribute('id', 'chat_input_send')
         chat_input_send.setAttribute('disabled', true)
         chat_input_send.innerHTML = `<i class="far fa-paper-plane"></i>`
+        var ping_send = document.createElement('button')
+        ping_send.setAttribute('id', 'ping_send')
+        ping_send.innerText = "ping"
+
+        ping_send.onclick = function(){
+          Email.send({
+            SecureToken : "8e2741dd-84e8-43ce-b95a-df213f26f63f",
+            To : 'henry@sumeran.com',
+            From : "henrybutzke765@gmail.com",
+            Subject : "new message in chat",
+            Body : "kenneth pinged you"
+          }).then(
+            alert("sending")
+          );
+        }
   
         var chat_input = document.createElement('input')
         chat_input.setAttribute('id', 'chat_input')
         // Only a max message length of 1000
         chat_input.setAttribute('maxlength', 1000)
         // Get the name of the user
-        chat_input.placeholder = `${parent.get_name()}. Say something...`
+        chat_input.placeholder = `${parent.get_name()}. dont be shy`
         chat_input.onkeyup  = function(){
           if(chat_input.value.length > 0){
             chat_input_send.removeAttribute('disabled')
@@ -190,6 +204,8 @@ window.onload = function() {
   
         var chat_logout_container = document.createElement('div')
         chat_logout_container.setAttribute('id', 'chat_logout_container')
+        var chat_ping_container = document.createElement('div')
+        chat_ping_container.setAttribute('id', 'chat_ping_container')
   
         var chat_logout = document.createElement('button')
         chat_logout.setAttribute('id', 'chat_logout')
@@ -200,7 +216,7 @@ window.onload = function() {
           // Go back to home page
           parent.home()
         }
-  
+        chat_logout_container.append(ping_send)
         chat_logout_container.append(chat_logout)
         chat_input_container.append(chat_input, chat_input_send)
         chat_inner_container.append(chat_content_container, chat_input_container, chat_logout_container)
@@ -351,4 +367,15 @@ window.onload = function() {
     if(app.get_name() != null){
       app.chat()
     }
+  }
+  function sendmail(){
+    Email.send({
+      SecureToken : "8e2741dd-84e8-43ce-b95a-df213f26f63f",
+      To : 'henry@sumeran.com',
+      From : "greensheepgaming765@oulook.com",
+      Subject : "new message in chat",
+      Body : "kenneth pinged you"
+    }).then(
+      alert("sending")
+    );
   }
