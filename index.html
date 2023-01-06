@@ -1,23 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Crypto:</h1>
-    <h3>javascript:(async () => {let n = document.createElement('iframe');document.body.append(n);window.alert = n.contentWindow.alert.bind(window);window.prompt = n.contentWindow.prompt.bind(window);window.confirm = n.contentWindow.confirm.bind(window);n.remove();function reactHandler() {return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;};if (window.location.pathname != '/play/hack') {alert('You must be in a crypto hack game mode to use this hack!');} else {let amount = Number(parseFloat(prompt('How much crypto do you want?')));reactHandler().stateNode.setState({ crypto2: amount, crypto: amount });alert('Crypto added!');};})();</h3>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Home</title>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="headers.css" rel="stylesheet">
+    <style>
+      h4 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <span class="fs-4">Sumeran</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link">       </a></li>
+          <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="/Translator/" class="nav-link">Translator</a></li>
+          <li class="nav-item"><a href="/Countdown/" class="nav-link">Countdown</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <h4>This is a Website where two buds make weird stuff, like a Translator so that we can send secret messages in school</h4>
+    <h4>or the Countdown I made that counts down till Chrismas Holliday.</h4>
     <br>
-    <br>
-    <h1>Gold quest:</h1>
-    <h2>Set Gold of a enemy:</h2>
-    <h3>javascript:(() => {let n = document.createElement('iframe');document.body.append(n);window.alert = n.contentWindow.alert.bind(window);window.prompt = n.contentWindow.prompt.bind(window);window.confirm = n.contentWindow.confirm.bind(window);n.remove();function reactHandler() {return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;};if (window.location.pathname != '/play/gold') {alert('You must be in a gold quest game!');} else let e = reactHandler(),player = prompt("Player name to set gold"),amount = Number(parseFloat(prompt("Amount to set gold to")));e.memoizedProps.firebase.setVal({id: e.memoizedProps.client.hostId,path: "c/" + e.memoizedProps.client.name,val: {b: e.memoizedProps.client.blook,g: e.stateNode.state.gold,tat: player + ":swap:" + amount})alert('Set gold for player:' + player + ' to ' + amount);};})();</h3>
-    <h2>Set gold of player:</h2>
-    <h3>(async () => {let n = document.createElement('iframe');document.body.append(n);window.alert = n.contentWindow.alert.bind(window);window.prompt = n.contentWindow.prompt.bind(window);window.confirm = n.contentWindow.confirm.bind(window);n.remove();function reactHandler() {return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;};if (window.location.pathname != '/play/gold') {alert('You must be in a gold quest game!');} else {let gold = Number(parseFloat(prompt('How much gold do you want?')));reactHandler().stateNode.setState({ gold2: gold, gold });alert('Gold added!');};})();</h3>
-    <br>
-    <br>
-    <h1></h1>
-</body>
+    <h4>Can you gues there names</h4>
+    <h4>ubily, Greensheep</h4>
+    </body>
 </html>
