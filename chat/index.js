@@ -87,7 +87,7 @@ window.onload = function() {
         join_button.onclick = function(){
         // Save the name to local storage. Passing in
         // the join_input.value
-        if (join_input.value === "ubily" && Pass_input.value === "test"){
+        if (join_input.value === "ubily" && Pass_input.value === "thehamborgor"){
         parent.save_name("Ubily")
         parent.create_chat()
         }
