@@ -1,0 +1,208 @@
+<body>
+  <head></head>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://unpkg.com/splitting@1.0.0/dist/splitting.css'>
+  
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: gainsboro;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, p {
+  color: #204754;
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+p:last-child {
+  margin-bottom: -6px;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10rem 2rem;
+}
+
+section {
+  margin-bottom: 10rem;
+  padding: 4rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);
+}
+section:last-child {
+  margin-bottom: 0;
+}
+
+.triggerOnScroll {
+  opacity: 0;
+  will-change: transform, scale, opacity;
+  transform: translateY(6rem) scale(0.93);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.splitting .char {
+  color: transparent;
+}
+.splitting .char:after {
+  visibility: visible;
+  color: #204754;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: calc(.2s + (.04s * var(--char-index) ) );
+}
+
+.active .char:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.4rem;
+    line-height: 3.6rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+
+  .site-wrap {
+    padding: 6rem 1rem;
+  }
+
+  section {
+    margin-bottom: 6rem;
+    padding: 2.4rem;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="site-wrap">
+
+  <section class="first">
+    <h1 data-splitting>why does it say under construction</h1>
+    <p>
+      The website is currently being developed and is not yet completed. It is possible that the website owner or developer has not finished building all of the pages and features that will be included on the site. This may be because they are still in the process of creating content, designing the layout, or coding the website's functionality.<br><br>
+
+      The website is undergoing maintenance or updates. It's possible that the website owner or developer is working on making improvements to the website such as fixing bugs, implementing new features, or updating the design. This process can take some time and during this time, the website may be temporarily taken offline to ensure that the changes are made correctly.<br><br>
+
+      The website is being redesigned. It could be that the website owner or developer is not satisfied with the current look and feel of the website and they are working on a complete redesign. This process can be time-consuming and may require the website to be taken offline while the changes are being made.<br><br>
+
+      The website is experiencing technical difficulties. Sometimes, websites may encounter technical issues such as server downtime, hacking attempts, or other problems that can cause the site to be offline. In this case, the website owner or developer may be working to resolve the issue and get the website back online as soon as possible.<br><br>
+
+      The website owner has not yet finished building the website. It could be that the website owner is still in the process of creating the website and has not yet had a chance to finish it. This could be due to a lack of time or resources, or other personal or business-related reasons.<br><br>
+
+      The website is being tested before it is launched. Before a website is made publicly available, it is important to test it to ensure that it is functioning correctly and that there are no major issues. The website owner or developer may be running tests on the website to make sure that it is ready for launch.<br><br>
+
+      The website is being moved to a new server or hosting platform. It could be that the website owner or developer is moving the website to a new server or hosting platform to improve performance, security, or other factors. This process can take some time and may require the website to be taken offline temporarily.<br><br>
+
+      The website is being optimized for better performance or search engine rankings. The website owner or developer may be working on optimizing the website for better performance and search engine rankings. This can include things like improving the website's speed, making sure that it is mobile-friendly, and ensuring that it is properly optimized for search engines.<br><br>
+
+      The website is being updated to comply with new web standards or regulations. It could be that the website owner or developer is making changes to the website to ensure that it complies with new web standards or regulations. For example, the website may need to be updated to comply with the General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA).<br><br>
+
+      The website is being updated to include new features or functionality. It could be that the website owner or developer is adding new features or functionality to the website to make it more useful or engaging for visitors. This could include things like new pages, forms, or interactive elements that are designed to improve the user experience.<br><br>
+    </p>
+  </section>
+
+  <section class="triggerOnScroll">
+    <h1 data-splitting>The end</h1>
+    <p>Thank you for visiting our website. We apologize that our site is currently under construction. As we continue to build and improve our website, we value any suggestions or feedback you may have. Your input can help us ensure that our website provides the best possible experience for our visitors. If you have any ideas or suggestions for features or functionality you would like to see on our website, please feel free to contact us by email at henry@sumeran.com. We appreciate your patience and support as we work to make our website the best it can be. Thank you!</p>
+  </section>
+
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  <script src='https://unpkg.com/splitting@1.0.0/dist/splitting.js'></script>
+      <script id="rendered-js" >
+Splitting();
+
+setTimeout(function () {
+  document.querySelector('.first').classList.add('active');
+}, 300);
+
+const sections = document.querySelectorAll('.triggerOnScroll');
+
+// Using Intersection Observer ↓
+
+const observerConfig = {
+  root: null,
+  rootMargin: '600px 0px 0px',
+  threshold: 0.1 };
+
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, observerConfig);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
