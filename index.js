@@ -3,15 +3,15 @@
 window.onload = function() {
   // Your web app's Firebase configuration
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyD1w6li8sNNplMAEE2fnnb2a5ktr9ZZ8Rw",
-    authDomain: "tptdts.firebaseapp.com",
-    databaseURL: "https://tptdts-default-rtdb.firebaseio.com",
-    projectId: "tptdts",
-    storageBucket: "tptdts.appspot.com",
-    messagingSenderId: "541065404521",
-    appId: "1:541065404521:web:f814719019f969451182f8",
-    measurementId: "G-03ED7ZWTSN"
+  const firebaseConfig = {
+    apiKey: "AIzaSyCpOyuegz5kwKU218UeIzo2ukq0zE7a_VY",
+    authDomain: "schoolchat-6ebb6.firebaseapp.com",
+    databaseURL: "https://schoolchat-6ebb6-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "schoolchat-6ebb6",
+    storageBucket: "schoolchat-6ebb6.appspot.com",
+    messagingSenderId: "964881728577",
+    appId: "1:964881728577:web:b3998a6e35e6aa5db472c0",
+    measurementId: "G-9L6D9EXH4L"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
