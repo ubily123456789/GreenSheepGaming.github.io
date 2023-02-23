@@ -40,7 +40,7 @@ window.onload = function() {
   
         var title = document.createElement('h1')
         title.setAttribute('id', 'title')
-        title.textContent = 'Sumeran'
+        title.textContent = 'FriendChat'
   
         title_inner_container.append(title)
         title_container.append(title_inner_container)
@@ -66,12 +66,17 @@ window.onload = function() {
         var join_input_container = document.createElement('div');
         join_input_container.setAttribute('id', 'join_input_container');
 
+        var Pass_input_container = document.createElement('div');
+        Pass_input_container.setAttribute('id', 'Pass_input_container');
   
         var join_input = document.createElement('input');
+        var Pass_input = document.createElement('input');
         join_input.setAttribute('id', 'join_input');
         Pass_input.setAttribute('id', 'Pass_input');
         join_input.setAttribute('maxlength', 15);
         join_input.placeholder = 'Username';
+        Pass_input.setAttribute('maxlength', 15);
+        Pass_input.placeholder = 'Password';
         // Every time we type into the join_input
         join_input.onkeyup  = function(){
           // If the input we have is longer that 0 letters
@@ -82,19 +87,14 @@ window.onload = function() {
         join_button.onclick = function(){
         // Save the name to local storage. Passing in
         // the join_input.value
-        if (join_input.value.lower() != "kenneth" ||  join_input.value.lower() != "henry" ){
-			parent.save_name(join_input.value)
-			parent.create_chat()
+        if (join_input.value === "ubily" && Pass_input.value === "test"){
+        parent.save_name("Ubily")
+        parent.create_chat()
         }
-		else{
-			var a = prompt("Password")
-			if (a = "Demon"){
-				parent.save_name(join_input.value)
-			}
-			else{
-				alert("Wrong Password")
-			}
-		}
+        if (join_input.value === "GreenSheep" && Pass_input.value === ""){
+          parent.save_name("GreenSheep")
+          parent.create_chat()
+        }
         // Remove the join_container. So the site doesn't look weird.
         join_container.remove()
         // parent = this. But it is not the join_button
@@ -368,5 +368,14 @@ window.onload = function() {
       app.chat()
     }
   }
-
+  function sendmail(){
+    Email.send({
+      SecureToken : "8e2741dd-84e8-43ce-b95a-df213f26f63f",
+      To : 'henry@sumeran.com',
+      From : "greensheepgaming765@oulook.com",
+      Subject : "new message in chat",
+      Body : "kenneth pinged you"
+    }).then(
+      alert("sending")
+    );
   }
