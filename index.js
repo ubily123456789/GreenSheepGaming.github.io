@@ -71,7 +71,7 @@ window.onload = function() {
       var join_input = document.createElement('input')
       join_input.setAttribute('id', 'join_input')
       join_input.setAttribute('maxlength', 15)
-      join_input.placeholder = 'Nane'
+      join_input.placeholder = 'Name'
       // Every time we type into the join_input
       join_input.onkeyup  = function(){
         // If the input we have is longer that 0 letters
@@ -148,7 +148,7 @@ window.onload = function() {
       var chat_input_send = document.createElement('button')
       chat_input_send.setAttribute('id', 'chat_input_send')
       chat_input_send.setAttribute('disabled', true)
-      chat_input_send.innerHTML = `{Send Button}`
+      chat_input_send.innerHTML = `{Send}`
 
       var chat_input = document.createElement('input')
       chat_input.setAttribute('id', 'chat_input')
