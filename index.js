@@ -1,5 +1,4 @@
-// We enclose this in window.onload.
-// So we don't have ridiculous errors.
+
 window.onload = function() {
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -67,17 +66,11 @@ window.onload = function() {
         var join_input_container = document.createElement('div');
         join_input_container.setAttribute('id', 'join_input_container');
 
-        var Pass_input_container = document.createElement('div');
-        Pass_input_container.setAttribute('id', 'Pass_input_container');
-  
         var join_input = document.createElement('input');
         var Pass_input = document.createElement('input');
         join_input.setAttribute('id', 'join_input');
-        Pass_input.setAttribute('id', 'Pass_input');
         join_input.setAttribute('maxlength', 15);
         join_input.placeholder = 'Username';
-        Pass_input.setAttribute('maxlength', 15);
-        Pass_input.placeholder = 'Password';
         // Every time we type into the join_input
         join_input.onkeyup  = function(){
           // If the input we have is longer that 0 letters
@@ -88,13 +81,19 @@ window.onload = function() {
         join_button.onclick = function(){
         // Save the name to local storage. Passing in
         // the join_input.value
-        if (join_input.value === "ubily" && Pass_input.value === "test"){
-        parent.save_name("Ubily")
-        parent.create_chat()
-        }
-        if (join_input.value === "GreenSheep" && Pass_input.value === ""){
-          parent.save_name("GreenSheep")
+        if (join_input.value.toLowerCase != "ubily" || join_input.value.toLowerCase != "ubily"){
+          parent.save_name("join_input.value")
           parent.create_chat()
+        }
+        else {
+          var a = prompt("Password")
+          if (a == "demon"){
+            parent.save_name("join_input.value")
+            parent.create_chat()  
+          }
+          else{
+            alert("WrongPassword")
+          }
         }
         // Remove the join_container. So the site doesn't look weird.
         join_container.remove()
@@ -157,22 +156,7 @@ window.onload = function() {
         chat_input_send.setAttribute('id', 'chat_input_send')
         chat_input_send.setAttribute('disabled', true)
         chat_input_send.innerHTML = `<i class="far fa-paper-plane"></i>`
-        var ping_send = document.createElement('button')
-        ping_send.setAttribute('id', 'ping_send')
-        ping_send.innerText = "ping"
 
-        ping_send.onclick = function(){
-          Email.send({
-            SecureToken : "8e2741dd-84e8-43ce-b95a-df213f26f63f",
-            To : 'henry@sumeran.com',
-            From : "henrybutzke765@gmail.com",
-            Subject : "new message in chat",
-            Body : "kenneth pinged you"
-          }).then(
-            alert("sending")
-          );
-        }
-  
         var chat_input = document.createElement('input')
         chat_input.setAttribute('id', 'chat_input')
         // Only a max message length of 1000
@@ -205,8 +189,6 @@ window.onload = function() {
   
         var chat_logout_container = document.createElement('div')
         chat_logout_container.setAttribute('id', 'chat_logout_container')
-        var chat_ping_container = document.createElement('div')
-        chat_ping_container.setAttribute('id', 'chat_ping_container')
   
         var chat_logout = document.createElement('button')
         chat_logout.setAttribute('id', 'chat_logout')
@@ -217,7 +199,6 @@ window.onload = function() {
           // Go back to home page
           parent.home()
         }
-        chat_logout_container.append(ping_send)
         chat_logout_container.append(chat_logout)
         chat_input_container.append(chat_input, chat_input_send)
         chat_inner_container.append(chat_content_container, chat_input_container, chat_logout_container)
@@ -368,15 +349,4 @@ window.onload = function() {
     if(app.get_name() != null){
       app.chat()
     }
-  }
-  function sendmail(){
-    Email.send({
-      SecureToken : "8e2741dd-84e8-43ce-b95a-df213f26f63f",
-      To : 'henry@sumeran.com',
-      From : "greensheepgaming765@oulook.com",
-      Subject : "new message in chat",
-      Body : "kenneth pinged you"
-    }).then(
-      alert("sending")
-    );
   }
