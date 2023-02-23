@@ -81,7 +81,7 @@ window.onload = function() {
         // Save the name to local storage. Passing in
         // the join_input.value
         if (join_input.value.toLowerCase != "kenneth" || join_input.value.toLowerCase != "henry"){
-          parent.save_name("join_input.value")
+          parent.save_name(join_input.value)
           parent.create_chat()
         }
         else {
