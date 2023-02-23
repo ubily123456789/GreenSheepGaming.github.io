@@ -1,6 +1,24 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
 window.onload = function() {
+  $('#chat_input').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      chat_input_send.setAttribute('disabled', true)
+      chat_input_send.classList.remove('enabled')
+      if(chat_input.value.length <= 0){
+        return
+      }
+      // Enable the loading circle in the 'chat_content_container'
+      parent.create_load('chat_content_container')
+      // Send the message. Pass in the chat_input.value
+      parent.send_message(chat_input.value)
+      // Clear the chat input box
+      chat_input.value = ''
+      // Focus on the input just after
+      chat_input.focus()
+    }
+  });
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyD1w6li8sNNplMAEE2fnnb2a5ktr9ZZ8Rw",
