@@ -14,9 +14,28 @@
 
     <!-- The CSS and JS file must be declared after the things above-->
     <link rel="stylesheet" href="index.css"/>
-    <script type="text/javascript" src="index.js"></script>
     <script>
+        $('#chat_input').keypress(function(event){
+          var keycode = (event.keyCode ? event.keyCode : event.which);
+          if(keycode == '13'){
+            chat_input_send.setAttribute('disabled', true)
+            chat_input_send.classList.remove('enabled')
+            if(chat_input.value.length <= 0){
+              return
+            }
+            // Enable the loading circle in the 'chat_content_container'
+            parent.create_load('chat_content_container')
+            // Send the message. Pass in the chat_input.value
+            parent.send_message(chat_input.value)
+            // Clear the chat input box
+            chat_input.value = ''
+            // Focus on the input just after
+            chat_input.focus()
+          }
+        });
     </script>
+    <script type="text/javascript" src="index.js"></script>
+    
 
   </head>
   <body>
