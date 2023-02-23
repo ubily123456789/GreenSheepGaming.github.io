@@ -2,15 +2,14 @@
 // So we don't have ridiculous errors.
 window.onload = function() {
   // Your web app's Firebase configuration
+  // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyD1w6li8sNNplMAEE2fnnb2a5ktr9ZZ8Rw",
     authDomain: "tptdts.firebaseapp.com",
-    databaseURL: "https://tptdts-default-rtdb.firebaseio.com",
     projectId: "tptdts",
     storageBucket: "tptdts.appspot.com",
     messagingSenderId: "541065404521",
-    appId: "1:541065404521:web:f814719019f969451182f8",
-    measurementId: "G-03ED7ZWTSN"
+    appId: "1:541065404521:web:f814719019f969451182f8"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -147,7 +146,7 @@ window.onload = function() {
       var chat_input_send = document.createElement('button')
       chat_input_send.setAttribute('id', 'chat_input_send')
       chat_input_send.setAttribute('disabled', true)
-      chat_input_send.innerHTML = `<i class="far fa-paper-plane"></i>`
+      chat_input_send.innerHTML = `{Send Button}`
 
       var chat_input = document.createElement('input')
       chat_input.setAttribute('id', 'chat_input')
