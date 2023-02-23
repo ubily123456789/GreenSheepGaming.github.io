@@ -67,7 +67,6 @@ window.onload = function() {
         join_input_container.setAttribute('id', 'join_input_container');
 
         var join_input = document.createElement('input');
-        var Pass_input = document.createElement('input');
         join_input.setAttribute('id', 'join_input');
         join_input.setAttribute('maxlength', 15);
         join_input.placeholder = 'Username';
@@ -105,7 +104,6 @@ window.onload = function() {
         // Append everything to the bo
         join_input_container.append(join_input)
         join_button_container.append(join_button)
-        join_input_container.append(Pass_input)
         join_inner_container.append(join_input_container, join_button_container)
         join_container.append(join_inner_container)
         document.body.append(join_container)
