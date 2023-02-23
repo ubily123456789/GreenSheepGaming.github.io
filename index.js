@@ -92,7 +92,7 @@ window.onload = function() {
             parent.create_chat()  
           }
           else{
-            alert("WrongPassword")
+            alert("Wrong Password")
           }
         }
         // Remove the join_container. So the site doesn't look weird.
