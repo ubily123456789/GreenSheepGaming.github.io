@@ -3,12 +3,14 @@
 window.onload = function() {
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
+    apiKey: "AIzaSyD1w6li8sNNplMAEE2fnnb2a5ktr9ZZ8Rw",
+    authDomain: "tptdts.firebaseapp.com",
+    databaseURL: "https://tptdts-default-rtdb.firebaseio.com",
+    projectId: "tptdts",
+    storageBucket: "tptdts.appspot.com",
+    messagingSenderId: "541065404521",
+    appId: "1:541065404521:web:f814719019f969451182f8",
+    measurementId: "G-03ED7ZWTSN"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
