@@ -74,7 +74,7 @@ window.onload = function() {
       join_input.placeholder = 'Name'
       // Every time we type into the join_input
       join_input.onkeyup  = function(){
-        // If the input we have is longer that 0 letters
+        var checkinput = join_input.value.toLowerCase()
         if(join_input.value.length > 0){
           // Make the button light up
           join_button.classList.add('enabled')
@@ -82,12 +82,36 @@ window.onload = function() {
           join_button.onclick = function(){
             // Save the name to local storage. Passing in
             // the join_input.value
-            parent.save_name(join_input.value)
-            // Remove the join_container. So the site doesn't look weird.
-            join_container.remove()
-            // parent = this. But it is not the join_button
-            // It is (MEME_CHAT = this).
-            parent.create_chat()
+            if (checkinput.includes("server")){
+              alert("Not Alowed")
+            }
+            else{
+              if (checkinput.includes("kenneth") || checkinput.includes("ubily") || checkinput.includes("ubilly")||checkinput.includes("ubillly")||checkinput.includes("ubilllly") ){
+                var a = prompt("PassWord")
+                if (a == "PopTart"){
+                  alert("Loging In")
+                  parent.save_name(join_input.value)
+                  // Remove the join_container. So the site doesn't look weird.
+                  join_container.remove()
+                  // parent = this. But it is not the join_button
+                  // It is (MEME_CHAT = this).
+                  parent.create_chat()
+                }
+                else{
+                  alert("Wrong Password")
+                }
+              }
+              if(checkinput.includes("henry")){
+                var a = prompt("Password")
+              }
+              else{
+                parent.save_name(join_input.value)
+                join_container.remove()
+                parent.create_chat()
+              }
+              
+            }
+            
           }
         }else{
           // If the join_input is empty then turn off the
