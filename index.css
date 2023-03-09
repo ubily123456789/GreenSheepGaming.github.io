@@ -288,3 +288,11 @@ body{
   background: #D64045;
   border-radius: 5px;
 }
+#delete_button {
+  color: black;
+}
+#delete_button :hover{
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
