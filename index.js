@@ -156,25 +156,6 @@ window.onload = function() {
     create_chat(){
       // Again! You need to have (parent = this)
       var parent = this;
-      if (parent.get_name() == "henry"){
-        var delete_button = document.createElement('button')
-        delete_button.setAttribute('id', 'delete_button')
-        delete_button.innerHTML = "Delete"
-        delete_button.onclick = function(){
-          var d = prompt("message number")
-          let chatRef = firebase.database().ref('/chats/message_' + d);
-          chatRef.remove();
-        }
-      }
-      if (parent.get_name() == "henry"){
-        var delete_button_all = document.createElement('button')
-        delete_button_all.setAttribute('id', 'delete_button_all')
-        delete_button_all.innerHTML = "Delete all"
-        delete_button_all.onclick = function(){
-          let chatRef = firebase.database().ref('/');
-          chatRef.remove();
-        }
-      }
       // GET THAT MEMECHAT HEADER OUTTA HERE
       var title_container = document.getElementById('title_container')
       var title = document.getElementById('title')
@@ -240,10 +221,6 @@ window.onload = function() {
         localStorage.clear()
         // Go back to home page
         parent.home()
-      }
-      if (parent.get_name() == "henry"){
-        chat_logout_container.append(delete_button)
-        chat_logout_container.append(delete_button_all)
       }
       chat_logout_container.append(chat_logout)
       chat_input_container.append(chat_input, chat_input_send)
