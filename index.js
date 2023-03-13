@@ -103,12 +103,7 @@ window.onload = function() {
               }
               else{
               if(checkinput.includes("henry")){
-                var a = prompt("Password")
-                if (a == pass){
-                  parent.save_name(join_input.value)
-                  join_container.remove()
-                  parent.create_chat()
-                }
+                alert("not alowed")
               }
               else{
                 parent.save_name(join_input.value)
