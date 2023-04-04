@@ -31,7 +31,7 @@
     </header>
   </div>
   <div class="container">
-    <h1>New Translator</h1>
+    <h1>Old Translator</h1>
     <input type="text" class="input" autofocus>
     <br><br>
     <input type="button" class="button" value="Translate" onclick="t()">
@@ -62,11 +62,11 @@
     alphabetchoice = ''
 
     // letters
-    alphabet = '' // add full stop and capitals
-    alphabet2 = ''
-    alphabet3 = ''
-    alphabet4 = ''
-    alphabet5 = ''
+    alphabet = 'abcdefghijklmnopqrstuvwxyzQWERTYUIOPASDFGHJKLZXCVBNM. ' // add full stop and capitals
+    alphabet2 = 'фджмяьйцнгшщзхъчывапролбитЙЦУКЕНГШЩЗФЫВАПРОЛДЯЧСМИТЬБЮ火э '
+    alphabet3 = 'ㅂㅈㄷㄱ쇼ㅕㅑㅐㅔ]ㅁㄴㅇㄹ호ㅓㅏㅣㅋㅌㅊ퓨ㅜ ㅡ法聲個皇聚況之閉尺衩㐪裮曼的父鄹錯昲保𧃍度落個法み年 '
+    alphabet4 = 'たていすかんなにらせちとしはきくまのりれけむつさそひこ民 '
+    alphabet5 = 'ςερτυθιοπασδφγηξκλζχψωβνμ¥保§ '
     console.log(alphabet.lenght);
     console.log(alphabet2.length);
     console.log(alphabet3.length);
@@ -115,10 +115,10 @@
       let res = input.value.charAt(input.value.length-1);
       console.log(res);
       let translation = ''; let curr_char = ''
-      if (res == "") {alphabetchoice = alphabet2}
-      if (res == "") {alphabetchoice = alphabet3}
-      if (res == "") {alphabetchoice = alphabet4}
-      if (res == "") {alphabetchoice = alphabet5}
+      if (res == "ю") {alphabetchoice = alphabet2}
+      if (res == "ㅒ") {alphabetchoice = alphabet3}
+      if (res == "み") {alphabetchoice = alphabet4}
+      if (res == "€") {alphabetchoice = alphabet5}
       for (let i = 0; i < input.value.length; i++) {curr_char = input.value.charAt(i); for (var j = 0; j < alphabetchoice.length; j++) {if (curr_char == alphabetchoice.charAt(j)) {translation = translation + alphabet.charAt(j)}}}
       h31.innerHTML = translation
     }
