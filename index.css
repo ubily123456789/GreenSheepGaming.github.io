@@ -296,3 +296,6 @@ body{
   text-decoration: underline;
   cursor: pointer;
 }
+.tr{
+  position: absolute;
+}
