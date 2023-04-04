@@ -1,45 +1,72 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Example Domain</title>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
-    }
-    div {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    @media (max-width: 700px) {
-        div {
-            margin: 0 auto;
-            width: auto;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        choose
+    </title>
+    <style>
+        button{
+            transition: 300ms;
+            width: 50%;
+            font-size: 70px;
         }
-    }
-    </style>    
-</head>
+        .main{
+            transition: 300ms;
+            display: flex;
+        }
+        *{
+            transition: 300ms;
+            height: 99%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .button_2{
+            transition: 300ms;
+            background-image: linear-gradient(to top left, red , yellow);
+            margin: 1%;
+            border-radius: 4%;
+            border: none;
+            box-shadow: gray 5px 5px 5px;   
+        }
+        .button_2:hover{
+            transition: 300ms;
+            opacity: 0.8;
+        }
+        .button_1{
+            transition: 300ms;
+            background-color: rgb(64, 52, 168);
+            margin: 1%;
+            border-radius: 4%;
+            border: none;
+            background-image: linear-gradient(to top left, rgb(0, 26, 255) , rgb(174, 201, 241));    
+            
+        }
+        .button_1:hover{
+            transition: 300ms;
+            opacity: 0.8;
+        }
+        body{
+            transition: 300ms;
+            background-image: linear-gradient(to  right, rgba(255, 2, 2, 0.76) , rgba(0, 60, 255, 0.61));
+        }
 
+    </style>
+</head>
 <body>
-<div>
-    <h1>Under Construction</h1>
-    <p>If you where doing something and your progres is gone were wery sorry</p>
-    <p><a href="Sorry.html">More information...</a></p>
-</div>
+    <div class="main">
+        <button class="button_2" onclick="tomusic()">Geometry Dash Music</button>  
+        <button class="button_1" onclick="tochat()">Chat</button> 
+        
+    </div>
+    <script>
+            function tochat(){
+                location.href = "https://www.sumeran.xyz/Chat";
+            }
+            function tomusic(){
+                location.href = "https://www.sumeran.xyz/gdmusic";
+            }
+    </script>
 </body>
 </html>
