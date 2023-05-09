@@ -1,5 +1,7 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
+
+a = g
 window.onload = function() {
   var ioas = true
   pass = "276289204128763430168240329763694219723219555"
@@ -142,6 +144,7 @@ window.onload = function() {
     }
     // create_chat() creates the chat container and stuff
     create_chat(){
+      if (a == pass) {
       // Again! You need to have (parent = this)
       var parent = this;
       
@@ -378,6 +381,7 @@ window.onload = function() {
           ioas = false
         }
       });
+    }
     }
     
     // Save name. It literally saves the name to localStorage
