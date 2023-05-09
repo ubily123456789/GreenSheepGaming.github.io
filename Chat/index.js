@@ -81,7 +81,7 @@ window.onload = function() {
           join_button.onclick = function(){
             // Save the name to local storage. Passing in
             // the join_input.value
-            if (checkinput.includes("server")){
+            if (checkinput.includes("[Admin]") || checkinput.includes("[admin]") || checkinput.includes("[") || checkinput.includes("]")){
               alert("Not Alowed")
             }
             else{
