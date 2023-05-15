@@ -104,6 +104,54 @@ window.onload = function() {
               if(checkinput.includes("henry")){
                 alert("not alowed")
               }
+              else{
+                parent.save_name(join_input.value)
+                join_container.remove()
+                parent.create_chat()
+              }
+            }
+            }
+
+          }
+        }else{
+          // If the join_input is empty then turn off the
+          // join button
+          join_button.classList.remove('enabled')
+        }
+      }
+
+      // Append everything to the body
+      join_button_container.append(join_button)
+      join_input_container.append(join_input)
+      join_inner_container.append(join_input_container, join_button_container)
+      join_container.append(join_inner_container)
+      document.body.append(join_container)
+    }
+    // create_load() creates a loading circle that is used in the chat container
+    create_load(container_id){
+      // YOU ALSO MUST HAVE (PARENT = THIS). BUT IT'S WHATEVER THO.
+      var parent = this;
+
+      // This is a loading function. Something cool to have.
+      var container = document.getElementById(container_id)
+      container.innerHTML = ''
+
+      var loader_container = document.createElement('div')
+      loader_container.setAttribute('class', 'loader_container')
+
+      var loader = document.createElement('div')
+      loader.setAttribute('class', 'loader')
+
+      loader_container.append(loader)
+      container.append(loader_container)
+
+    }
+    // create_chat() creates the chat container and stuff
+    create_chat(){
+      // Again! You need to have (parent = this)
+      var parent = this;
+      // GET THAT MEMECHAT HEADER OUTTA HERE
+      var title_container = document.getElementById('title_container')
       var title = document.getElementById('title')
       title_container.classList.add('chat_title_container')
       // Make the title smaller by making it 'chat_title'
